@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: #f4f7ff
+}
+.tgl{
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 70px;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+	background: #fff;
+	overflow: hidden
+}
+.tgl:hover{
+	cursor: pointer;
+}
+.tgl span{
+	position: absolute;
+	width: 40px;
+	height: 4px;
+	border-radius: 4px;
+	background: #1863ff;
+	transition: transform 500ms
+}
+.tgl span:nth-child(1){
+	width: 25px;
+	left: 15px;
+	transform: translateY(-15px)
+}
+.tgl.active span:nth-child(1){
+	width: 40px;
+	transform: translateY(0px) rotate(315deg);
+	transition-delay: 125ms
+}
+.tgl.active span:nth-child(2){
+	width: 40px;
+	transform: translateY(0px) rotate(45deg);
+	transition-delay: 25ms
+}
+.tgl.active span:nth-child(3){
+	width: 40px;
+	transform: translateY(0px) rotate(45deg);
+}
+.tgl span:nth-child(2){
+	width: 15px;
+	left: 15px;
+	transform: translateY(15px)
+}
+.tgl.active span:nth-child(3){
+	transform: translateX(60px);
+}
